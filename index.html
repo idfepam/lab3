@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<script src="main.js"></script>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <h1>Swap a kitten!</h1>
+    <div id="imageSelector">
+        <input type="radio" id="radioImage1" name="image" value="0">
+        <label for="radioImage1">Image 1</label><br>
+        <input type="radio" id="radioImage2" name="image" value="1">
+        <label for="radioImage2">Image 2</label><br>
+        <input type="radio" id="radioImage3" name="image" value="2">
+        <label for="radioImage3">Image 3</label><br>
+    </div>
+
+    <input type="number" id="imgWidth" placeholder="Enter width">
+    <button id="applyWidth" onclick="updateImageWidth(imgWidth.value)">Apply</button>
+
+    <input type="number" id="imgHeight" placeholder="Enter height">
+    <button id="applyHeight" onclick="updateImageHeight(imgHeight.value)">Apply</button>
+
+    <input type="number" id="borderThickness" placeholder="Enter border thickness">
+    <button id="applyBorder" onclick="updateBorderThickness(borderThickness.value)">Apply</button>
+
+    <input type="text" id="altText" placeholder="Enter alternate text">
+    <button id="applyText" onclick="updateAltText(altText.value)">Apply</button>
+    
+    <button id="btnMoveUp" onclick="moveSelectedImage('up')">Up</button>
+    <button id="btnMoveDown" onclick="moveSelectedImage('down')">Down</button>
+    
+    <div id="images">
+        <img id="imgElement1" src="img1.jpg" alt="Image 1">
+        <img id="imgElement2" src="img2.jpg" alt="Image 2">
+        <img id="imgElement3" src="img3.jpg" alt="Image 3">
+    </div>
+</body>
+</html>
