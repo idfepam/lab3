@@ -2,36 +2,36 @@ let image1 = 'img1.jpg';
 let image2 = 'img2.jpg';
 let image3 = 'img3.jpg';
 
-var images = [image1, image2, image3];
+let images = [image1, image2, image3];
 
 function updateImageWidth(imgWidth) {
-    var selectedImageIndex = getSelectedImageIndex();
+    let selectedImageIndex = getSelectedImageIndex();
     if (selectedImageIndex !== null) {
-        var imgElement = imgElements[selectedImageIndex];
+        let imgElement = imgElements[selectedImageIndex];
         imgElement.style.width = imgWidth + 'px';
     }
 }
 
 function updateImageHeight(imgHeight) {
-    var selectedImageIndex = getSelectedImageIndex();
+    let selectedImageIndex = getSelectedImageIndex();
     if (selectedImageIndex !== null) {
-        var imgElement = imgElements[selectedImageIndex];
+        let imgElement = imgElements[selectedImageIndex];
         imgElement.style.height = imgHeight + 'px';
     }
 }
 
 function updateBorderThickness(imgThickness) {
-    var selectedImageIndex = getSelectedImageIndex();
+    let selectedImageIndex = getSelectedImageIndex();
     if (selectedImageIndex !== null) {
-        var imgElement = imgElements[selectedImageIndex];
+        let imgElement = imgElements[selectedImageIndex];
         imgElement.style.border = imgThickness + 'px solid black';
     }
 }
 
 function updateAltText(imgAlt) {
-    var selectedImageIndex = getSelectedImageIndex();
+    let selectedImageIndex = getSelectedImageIndex();
     if (selectedImageIndex !== null) {
-        var imgElement = imgElements[selectedImageIndex];
+        let imgElement = imgElements[selectedImageIndex];
         imgElement.alt = imgAlt;
     }
 }
@@ -39,7 +39,7 @@ function updateAltText(imgAlt) {
 
 function getSelectedImageIndex() {
     for (let i = 0; i < images.length; i++) {
-        var radioButton = document.getElementById('radioImage' + (i + 1));
+        let radioButton = document.getElementById('radioImage' + (i + 1));
         if (radioButton.checked) {
             return i;
         }
@@ -49,7 +49,7 @@ function getSelectedImageIndex() {
 
 function moveSelectedImage(direction) {
     console.log(direction);
-    var selectedImageIndex = getSelectedImageIndex();
+    let selectedImageIndex = getSelectedImageIndex();
     if (selectedImageIndex !== null) {
         if (direction === 'up') {
             if (selectedImageIndex === 0) {
@@ -69,11 +69,11 @@ function moveSelectedImage(direction) {
     }
 }
 
-var imgElements = [];
+let imgElements = [];
 
 function updateImagesOnPage() {
     for (let i = 0; i < images.length; i++) {
-        var imgElement = document.getElementById('imgElement' + (i + 1));
+        let imgElement = document.getElementById('imgElement' + (i + 1));
         imgElement.src = images[i];
     }
 
